@@ -1,0 +1,56 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    height:100vh;
+    overflow:hidden;
+    background: linear-gradient(45deg, #061de3,#e306ca);
+    font-family: Helvetica, sans-serif;
+    color: rgb(211, 211, 211);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 580px;
+    height: 480px;
+}
+.container:hover> .card{
+    cursor:pointer;
+    transform:rotateY(180deg)
+}
+.card{
+    height :100%;
+    width: 100%;
+    position:relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+.card:hover{
+    cursor:pointer;
+    transform:rotateY(180 deg);
+}
+.front,
+.back{
+    height:100%;
+    width:100%;
+    border-radius: 2rem;
+    box-shadow:  0 0 5px 2px rgba(50,50,50,0.25);
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front{
+    background-image: url(https://pre00.deviantart.net/1a5c/th/pre/i/2012/016/7/8/roronoa_zoro_by_animefanno1-d4mlidd.jpg);
+}
+.back{
+    background-image: url(https://i.pinimg.com/originals/e1/be/f1/e1bef11b5e8433b072de915c1769b7e8.png);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    
+
+}
